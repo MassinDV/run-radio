@@ -23,5 +23,5 @@ jobs:
           )
 
           for url in "${radio_stream_urls[@]}"; do
-            curl -sSf "$url" > /dev/null
+            curl -sSf "$url" > "$(basename $url)".m3u
           done
